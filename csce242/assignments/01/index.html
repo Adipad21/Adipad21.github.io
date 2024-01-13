@@ -1,1 +1,71 @@
-Welcome to Assignment 01
+<!DOCTYPE html>
+<html>
+    <!--Name: Aditya Padala, Course: CSCE 242-->
+    <head>
+        <title>CSCE 242: Assignment 1 - Basic HTML</title>
+    </head>
+    
+    <body>
+        <h1>Mini Autonomous Self Driving Car: Model UNDERDOG</h1>
+        <h3><underline>Design Summary</underline></h3>
+        <p>Model UNDERDOG operates using an electromagnetic field sensor to travel autonomously across a 90 ft track. This track has an 
+            embedded wire propagating a 1 amp, 20 kHz square wave signal. Our vehicle model consists of three main systems: 
+            1) Magnetic Distance Sensor, 2) Buck Converter, 3) Frequency to voltage converter.</p>
+        <p>Magnetic Distance Sensor has five subsystems: a) LC Resonant Circuit: Current from the track gives off pulses of magnetic field, 
+            and inductors have the ability to convert this magnetic field into pulses of voltage - the closer the inductor, the stronger 
+            the voltage. The circuit acts as a low pass filter converting a square wave signal into a sine wave signal. 
+            b) Amplification Circuit: Amplify the input voltage into a desired output voltage by adjusting the gain using a non-inverting 
+            amplifier circuit. c) Rectification Circuit: It conducts current primarily in one direction. Also ensures the voltage is always 
+            positive. d) Peak Detection Low Pass Filter: Reduces the ripple and the peak detector holds the peak value of the op-amp output, 
+            and uses it to produce a DC signal. e) Input Protection: Zener diode ensures that the voltage does not exceed 3.3V. This voltage 
+            acts as an input for the microcontroller (max pin voltage is 3.3V).</p>
+        <p>The Buck Converter System takes in an input from the main power supply being 7.2VDC and lowers the voltage to a range that is 
+            acceptable that the microcontroller can handle which is 3.3VDC. The circuit consists of a gate driver TC4428, IRF540N MOSFET, 
+            and a MBR 1060 diode. The TC4428 is used to drive the gate of the MOSFET. The IRF540N is used for the voltage switching of the 
+            circuit. The 1060 diode is used to prevent feedback onto the circuit the wiring for the motor is also wired in here.</p>
+        <p>The next system is the frequency to voltage converter which takes an input voltage and outputs a frequency. This is inputted 
+            into the PWM analog-in port of the microcontroller. There is also a schmitt trigger used in this circuit where it is used as 
+            a voltage detector and its switching properties to give a clean square wave output. Wired to the schmitt trigger is the wheel 
+            encoder sensor that gives feedback to the microcontroller so that the user can determine what changes are needed to make the 
+            system better.</p>
+        
+        <h3>Pictures:</h3>
+        <img src="car.jpg" alt="car" height="300" width="300">
+        <figcaption>Underdogs Mini Self Driving Car</figcaption>
+        <img src="team.png" alt="team" height="300" width="400">
+        <figcaption>Underdog Team </figcaption>
+
+        <h3>Team members:</h3>
+        <table>
+            <tr>
+                <th>Name</th>
+                <th>Department</th>
+            </tr>
+            <tr>
+                <td>Yuta</td>
+                <td>Steering</td>
+            </tr>
+            <tr>
+                <td>Aditya</td>
+                <td>Steering</td>
+            </tr>
+            <tr>
+                <td>Garett</td>
+                <td>Driving</td>
+            </tr>
+            <tr>
+                <td>Aiden</td>
+                <td>Driving</td>
+            </tr>
+        </table>
+
+        <h3>Additional Links:</h3>
+        <ol>
+            <li><a href="https://drive.google.com/file/d/1cIWmdP7pVPXH1JyokFTWF90432oPMlL8/view?usp=sharing">Test Drive Video</a></li>
+            <li><a href="https://drive.google.com/file/d/1RKVHNChiVGarY1aYdFbAKGPN8arbMCGL/view?usp=sharing">Car Technical Manual</a></li>
+            <li><a href="https://drive.google.com/file/d/1g7TWZOqu8DRf7dMZra5cHScliAUJZ-7U/view?usp=sharing">Car Circuit Schematic</a></li>
+        </ol>
+
+    </body>
+
+</html>
