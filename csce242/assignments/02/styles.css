@@ -9,7 +9,7 @@ body{
 /* Structure */ 
 #heading{
     padding-top: 10px;
-    padding-bottom: 5px;
+    padding-bottom: 2px;
     background: #7FBD32;
     margin:-10px; 
     text-align:center;
@@ -30,7 +30,7 @@ body{
     color: #EEF8E3;
     border-radius: 5px;
     margin:40px;
-    padding:4px;
+    padding:5px;
 }
 #main-nav a:hover{
     background: #213409;
