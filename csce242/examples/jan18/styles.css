@@ -31,13 +31,11 @@ body{
     /* Remove bullet */
     list-style-type: none;
     background: #f1a177;
-
 }
 #main-nav a{
     /* Remove underline for link */
     text-decoration: none;
     color: white;
-
 }
 /* Typography */
 h1{
