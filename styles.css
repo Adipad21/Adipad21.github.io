@@ -17,14 +17,37 @@ body{
     text-indent:10px
 }
 
+#main-footer{
+    background-color: #342B09;
+    margin:-10px;
+    color:#FEF7DC;
+    text-align: center;
+    padding:0.5px;
+}
 /* Navigation */
-#links a{
+#links a,#links li{
     text-decoration: none;
     color: #B08A03;
 }
-#links a:hover{
-    background: #342B09;
+#links li:hover{
+    background: #B08A03;
+    border-radius: 5px;
+}
+#links li:hover a{
     color: #FEF7DC;
+}
+#links ul{
+    list-style-type: none;
+}
+#links .columns{
+    margin:auto;
+    padding:5px;
+    text-align: center;
+}
+#links .columns li{
+    padding: 12px;
+    margin-top:1px;
+    margin-bottom:10px;
 }
 
 /* Typography */
@@ -40,13 +63,28 @@ h1{
 .linkhead{
     padding:10px;
     margin-bottom:-10px;
+    text-align: center;
 }
 
-.list{
-    margin:10px;
-}
-
-p{
+#main-content p{
     text-indent: 30px;
     margin-bottom: -10px; /* between paragraphs */
 }
+
+/* For larger resolutions */
+@media only screen and (min-width: 1000px){
+    .columns{
+        display: flex;
+    }
+    .columns li{
+        padding: 5px 20px;
+    }
+    #links li{
+        flex:33%;
+    }
+    #links p{
+        width:100%;
+        margin: auto;
+    }
+}
+

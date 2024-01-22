@@ -68,7 +68,7 @@ h1{
     color:#F07D80;
 }
 /* For larger resolution */
-@media only screen and (min-width: 1400px){
+@media only screen and (min-width: 1300px){
     .ideas article,.columns,.title{
         display: flex;
     }
