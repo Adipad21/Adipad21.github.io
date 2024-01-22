@@ -49,6 +49,10 @@ body{
     margin-top:1px;
     margin-bottom:10px;
 }
+#links p{
+    margin: auto;
+    text-align: justify;
+}
 
 /* Typography */
 h1{
@@ -83,8 +87,10 @@ h1{
         flex:33%;
     }
     #links p{
-        width:100%;
+        width:90%;
+        text-align: justify;
         margin: auto;
+
     }
 }
 
