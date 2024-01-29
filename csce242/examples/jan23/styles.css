@@ -1,0 +1,42 @@
+
+
+#block{
+    width:150px;
+    height:150px;
+    background: lightblue;
+    animation-duration: 2s;
+    animation-iteration-count: infinite;
+    position:relative;
+}
+
+
+/* Animations */
+@keyframes play{
+    0% {
+        background:red;
+        opacity:1;
+        left:0%;
+    }
+    15% {
+        background:orange;
+    }
+    30% {
+        background:yellow;
+    }
+    45% {
+        background:green;
+        opacity:0;
+        left:0%;
+    }
+    65% {
+        background:blue;
+    }
+    80% {
+        background:indigo;
+    }
+    100% {
+        background:violet;
+        opacity:1;
+        left:0%;
+    }
+}

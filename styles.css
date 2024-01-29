@@ -79,12 +79,13 @@ h1{
 @media only screen and (min-width: 1000px){
     .columns{
         display: flex;
+        flex-wrap: wrap;
     }
     .columns li{
         padding: 5px 20px;
     }
     #links li{
-        flex:33%;
+        flex:30%;
     }
     #links p{
         width:90%;
