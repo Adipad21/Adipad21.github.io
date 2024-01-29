@@ -132,6 +132,9 @@ body{
     margin:5px;
     font-size: 15px;
 }
+#side .gray{
+    color:#5C5C5C;
+}
 #side h3{
     font-size: 20px;
 }
@@ -357,6 +360,9 @@ body{
     }
     #glance,#future{
         margin-left: 30px;
+    }
+    #side{
+        margin-top:35px;
     }
 
     /* Footer */
