@@ -366,7 +366,7 @@ body{
     }
 
     /* Footer */
-    #main-footer #grey .area {
+    #main-footer #grey .area{
         width:75%;
         margin:auto;
         display:flex;
