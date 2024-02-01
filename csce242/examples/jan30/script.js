@@ -9,6 +9,5 @@ const hideImage = () =>{
 };
 
 
-
 document.getElementById("btn-click").onclick = doStuff;
 document.getElementById("image").onclick = hideImage;
