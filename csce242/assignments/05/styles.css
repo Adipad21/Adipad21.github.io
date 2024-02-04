@@ -14,15 +14,16 @@ body{
     padding-bottom: 20px;
     text-align: center;
 }
-#main-content .replace,.rotate,.add-star{
+#main-content #replace,#rotate,#add-star{
     border: 1px solid black;
     padding:10px;
     width:100%;
+    background: #fafad2;
 }
 #main-content {
     text-align: center;
 }
-#main-content .add-star{
+#main-content #add-star{
     background:  #3D6773;
     color:#ffff;
 }
@@ -44,7 +45,41 @@ body{
     display: block; 
     margin: auto;
 }
+.slider {
+    appearance: none;
+    height: 25px; 
+    background: #E1E4E6; 
+    opacity: 0.7; 
+    -webkit-transition: .2s;
+    transition: opacity .2s;
+}
+  
+/* Mouse-over effects */
+.slider:hover {
+opacity: 1; /* Fully shown on mouse-over */
+}
 
+/* The slider handle (use -webkit- (Chrome, Opera, Safari, Edge) and -moz- (Firefox) to override default look) */
+.slider::-webkit-slider-thumb {
+appearance: none;
+width: 25px; /* Set a specific slider handle width */
+height: 25px; /* Slider handle height */
+background: #F07D80; /* Green background */
+cursor: pointer; /* Cursor on hover */
+}
+
+#star-container{
+    margin: auto;
+    width:fit-content;
+}
+.star {
+    background: #ffff00;
+    width: 50px;
+    height: 50px;
+    margin: 4px;
+    justify-content: center;
+    clip-path: polygon(50% 0%, 61% 35%, 98% 35%, 68% 57%, 79% 91%, 50% 70%, 21% 91%, 32% 57%, 2% 35%, 39% 35%);
+}
 
 /* Typography */
 h1{
@@ -64,5 +99,8 @@ h2{
     #main-content .columns{
         display:flex;
         gap:15%;
+    }
+    #main-footer{
+        margin-top: 70px;
     }
 }
