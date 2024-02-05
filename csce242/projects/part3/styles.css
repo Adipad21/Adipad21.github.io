@@ -50,12 +50,21 @@ body{
     margin: 4px 7px;
 }
 /* Main */
+#main-nav {
+    text-align: start;
+    width:90%;
+    margin:auto;
+}
 #main-nav a{
     text-decoration: none;
     color:#000000;
     padding:1px 5px;
-    border-radius: 10px;
     font-size: 14px;
+}
+#main-nav li{
+    background: #EFEFEF;
+    border:1px solid black;
+    padding: 5px 0px;
 }
 #main-nav ul{
     margin:auto;
@@ -66,10 +75,19 @@ body{
 #main-nav a:hover{
     color: blue;
     padding-bottom:1px;
-    border-radius:10px;
 }
-#main-nav .columns,#main-content #subject{
+#main-nav #columns,#main-content #subject{
     margin:auto;
+}
+#subject{
+    padding-top:15px;
+}
+#main-nav #columns{
+    margin:auto;
+    display:none;
+}
+#main-nav #columns.active {
+    display: block;
 }
 #main-content{
     margin:auto 0px;
@@ -87,7 +105,7 @@ body{
 #subject .content{
     flex:33%;
     padding: 5px 2%;
-    margin:20px 0px;
+    margin-bottom: 20px;
 } 
 #subject .split{
     display:flex;
@@ -99,52 +117,165 @@ body{
     font-size: 12px;
     padding-bottom:20px;
 }
-.content p{
-    text-align: justify;
-}
 .split a{
     text-decoration: none;
     color:#000000;
+}
+#schedule-page .content{
+    margin-bottom:40px;
+}
+#login-page .content{
+    padding-bottom: 40px;
+}
+#login{
+    width:fit-content;
+    background:lightgray;
+    padding:2px 10px;
+    font-size: 14px;
+    border-radius: 10px;
+    margin:auto;
+}
+.content p, #login p{
+    text-align: center;
+    font-size: 13px;
+    margin-top: 8px;
+}
+#home-page .content p,#training-page .content p, #schedule-page .content p{
+    text-align:justify;
+}
+#email h3,#password h3{
+    margin-bottom: 0;
+    text-align: start;
+    font-size: 13px;
+}
+.layout{
+    width:80%;
+    margin:auto;
+}
+.main-address{
+    background:#ffffff;
+    border-radius: 20px;
+    padding: 5px;
+    margin:auto;
+    margin-top: 10px;
+    margin-bottom: 20px;
+}
+.two{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    max-width: 100%;
+    max-height: 100%;
+    margin:auto;
+}
+.two iframe{
+    max-width: 90%;
+    max-height: 90%;
+}
+.address{
+    background: #ffffff;
+    border-radius: 10px;
+    padding-left: 20px;
+    padding-right: 20px;
+}
+.button{
+    margin-bottom: 8px;
+}
+#gallery-page #images img{
+    max-width: 100%;
+    max-height: 100%;
+    justify-content: center;
+    border-radius: 10px;
+}
+#images{
+    display:flex;
+    flex-direction: column;
+    align-items: center;
+    gap:20px;
+}
+#three{
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    flex-wrap: wrap;
+    gap:2%;
+}
+#three div{
+    flex:30%;
+    margin-bottom: 20px;
+}
+#coach{
+    margin-top: 15px;
+    margin-bottom: 10px;
+}
+.coach-split{
+    align-items: center;
+    margin:auto;
+}
+.coach-name h3{
+    font-size: 16px;
+    margin-top:0;
+    margin-bottom: 0;
+}
+.coach-name p{
+    margin-top: 0;
+    margin-bottom: 0;
+    text-align: justify;
 }
 
 #main-footer{
     margin-top:auto;
     background: #EFEFEF;
+    font-size: 12px;
 }
-#main-nav {
-    text-align: start;
-    width:90%;
-    margin:auto;
-}
-#main-nav ul{
-    padding-top: 10px;
-    background-color: grey; 
-}
-#main-nav li{
-    padding-top:2px;
-}
-.hide {
-    display: none;
-  }
+
 @media only screen and (min-width: 800px){
     #main-nav ul{
         width:95%;
     }
     #subject{
         width:85%;
+        padding-top:none;
     }
-    #main-nav .columns,#main-content #subject{
+    #main-nav #columns,#main-content #subject{
     display:flex;
     justify-content:space-around;
     margin:auto;
     padding-bottom: 50px;
     }
+    #main-nav li{
+        background: none;
+        border: none;
+        padding: 5px 0px;
+    }
+    
     #subject .content{
-        margin-top:0px;
         margin-bottom:0px;
+    }
+    #event{
+        display: flex;
+        flex-direction: column;
+        gap:40px;
     }
     .split{
         margin-left:5%;
+    }
+    .two iframe{
+        max-width: 100%;
+        max-height: 100%;
+    }
+    .coach-split{
+        display: flex;
+        justify-content: center;
+        gap:20px;
+        align-items: center;
+    }
+    .coach-name h3{
+        text-align: start;
+    }
+    #main-nav .highlight{
+        border-bottom: 2px solid blue;
+        color: blue;
     }
     #container{
         display:none;
