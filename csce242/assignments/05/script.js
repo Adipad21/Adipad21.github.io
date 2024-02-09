@@ -7,13 +7,10 @@ const replaceImage = () =>{
     else 
         imgreplace.src = "http://placehold.it/200x200/F07D80/fff";
 };
-imgreplace.onclick = replaceImage;
-
 
 const rotateImage = () => {
     document.getElementById("img-rotate").style.transform = 'rotate(' + slider.value + 'deg)';
 };
-slider.addEventListener ('input', rotateImage);
 
 
 const addStar = () => {
@@ -23,4 +20,7 @@ const addStar = () => {
     star.classList.add("star");
 };
 
+
+imgreplace.onclick = replaceImage;
+slider.addEventListener ('input', rotateImage);
 document.getElementById("add-star").onclick = addStar;

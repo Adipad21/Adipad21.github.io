@@ -1,4 +1,3 @@
-
 const showHideNav = () => {
     const navItems = document.getElementById("nav-items");
     const arrow = document.querySelector("#hamburger .arrow");
@@ -10,21 +9,22 @@ const showHideNav = () => {
         arrow.innerHTML = "&#9650;";
     }
 };
-document.getElementById("exercise1").addEventListener("click", function(e) {
-    e.preventDefault(); // Prevent default link behavior
+
+const exercise1 = (e) => {
+    e.preventDefault(); 
     document.getElementById("command").classList.add("show");
     document.getElementById("command").classList.remove("hide-content");
     document.getElementById("yoga").classList.remove("show");
     document.getElementById("yoga").classList.add("hide-content");
-});
+};
 
-document.getElementById("exercise2").addEventListener("click", function(e) {
-    e.preventDefault(); // Prevent default link behavior
+const exercise2 = (e) => {
+    e.preventDefault(); 
     document.getElementById("yoga").classList.add("show");
     document.getElementById("yoga").classList.remove("hide-content");
     document.getElementById("command").classList.remove("show");
     document.getElementById("command").classList.add("hide-content");
-});
+};
 
 const showCommand = () => {
     const commandInput = document.getElementById("command-reg").value.trim();
@@ -71,6 +71,8 @@ const yogaImage = () => {
     }
 };
 
+document.getElementById("hamburger").onclick = showHideNav;
+document.getElementById("exercise1").addEventListener("click", exercise1);
+document.getElementById("exercise2").addEventListener("click", exercise2);
 document.getElementById("command-reg").addEventListener("keyup",showCommand);
 document.getElementById("yogaSlider").addEventListener ('input', yogaImage);
-document.getElementById("hamburger").onclick = showHideNav;
