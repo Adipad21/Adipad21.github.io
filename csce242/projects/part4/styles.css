@@ -112,7 +112,7 @@ body{
 .content,.box{
     background:#121D40;
     color:#F2A649;
-    border-radius: 12px;
+    border-radius: 20px;
 }
 #subject .content{
     flex:33%;
