@@ -255,6 +255,9 @@ body{
     margin:auto;
     width: fit-content;
 }
+#home-page .content p,#training-page .content p,#coach-page .content p{
+    font-size: 13px;
+}
 p{
     color:white;
 }
