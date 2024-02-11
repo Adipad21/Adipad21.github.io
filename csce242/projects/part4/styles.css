@@ -258,6 +258,10 @@ body{
 #home-page .content p,#training-page .content p,#coach-page .content p{
     font-size: 13px;
 }
+iframe{
+    border-radius: 10px;
+    padding:1px;
+}
 p{
     color:white;
 }
@@ -267,9 +271,9 @@ p{
 #main-footer p{
     color: #F2A649;
 }
-iframe{
-    border-radius: 10px;
-    padding:1px;
+h5{
+    font-size: 14px;
+    margin-bottom: auto;
 }
 
 @media only screen and (min-width: 800px){
