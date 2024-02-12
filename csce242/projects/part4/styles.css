@@ -258,6 +258,10 @@ body{
 #home-page .content p,#training-page .content p,#coach-page .content p{
     font-size: 13px;
 }
+#three img{
+    width:150px;
+    height: 150px;
+}
 iframe{
     border-radius: 10px;
     padding:1px;
@@ -272,7 +276,7 @@ p{
     color: #F2A649;
 }
 h5{
-    font-size: 14px;
+    font-size: 15px;
     margin-bottom: auto;
 }
 
