@@ -1,0 +1,164 @@
+body{
+    font-family: Arial, Helvetica, sans-serif;
+    background: #E1E4E6;
+    color: #3D6773;
+}
+
+/* Structure */
+#content{
+    width: 95%;
+    margin: auto; /* center horizontally */
+}
+/* Header */
+#main-header{
+    text-align: center;
+    margin-bottom: 20px;
+}
+#hamburger{
+    width: fit-content;
+    margin:auto;
+    padding:0px;
+}
+.arrow{
+    cursor:pointer;
+}
+
+#main-nav ul {
+    padding-left: 0px;
+}
+
+#main-nav li {
+    list-style-type: none; 
+}
+
+#main-nav a {
+    text-decoration: none;
+    color: #3D6773;
+}
+
+#main-nav a:hover {
+    border-bottom: 1px solid#3D6773;
+}
+.nav-items{
+    display:flex;
+    flex-direction: column;
+    justify-content: center;
+    gap:2px;
+    margin-top: 2px;
+    margin-bottom:5px;
+}
+.hide-small {
+    display: none;
+}
+/* Main */
+#main-content{
+    display: flex;
+    flex-direction: row;
+    gap:5%;
+    justify-content: center;
+    margin: auto;
+}
+#command,#yoga{
+    border: 1px solid black;
+    width:50%;
+    padding:10px;
+    background: #fafad2;
+    margin:auto;
+    text-align: center;
+}
+
+#options{
+    text-align: left;
+    display: inline-block;
+    margin: auto;
+}
+
+#yogaSlider{
+    width: 100%;
+    margin:auto;
+}
+#yoga-image{
+    transition: transform 0.2s; 
+    display: block; 
+    margin: auto;
+}
+.slider{
+    appearance: none;
+    height: 25px; 
+    background: #E1E4E6; 
+    opacity: 0.7; 
+    -webkit-transition: .2s;
+    transition: opacity .2s;
+    border-radius: 5px;
+}
+  
+.slider:hover{
+    opacity: 1; 
+}
+
+.slider::-webkit-slider-thumb{
+    appearance: none;
+    width: 25px; 
+    height: 25px; 
+    background: #F07D80; 
+    cursor: pointer; 
+    border-radius: 5px;
+}
+
+#yoga img, #command-reg{
+    max-width: 80%;
+    max-height: 80%;
+}
+#command img{
+    max-width: 50%;
+    max-height: 50%;
+}
+
+/* Footer */
+#main-footer{
+    background: #E1E4E6;
+    padding-top:2px;
+    color: #3D6773;
+    text-align: center;
+}
+/* Typography */
+h1{
+    color: #3D6773;
+}
+h2{
+    color: #F07D80;
+}
+
+/* Display */
+.hide-content {
+    display: none;
+}
+.show-content {
+    display: block;
+}
+
+/* For larger resolution */
+@media only screen and (min-width: 800px){
+    #main-content{
+        width:60%;
+        margin:auto;
+        justify-content: space-between;
+    }
+    #hamburger{
+        display: none;
+    }
+    #nav-items{
+        display:flex;
+        flex-direction: row;
+        justify-content: center;
+        align-items: center;
+    }
+    #nav-items li::after {
+        content: "|";
+        padding:0px 20px; 
+    } 
+    #nav-items li:last-child::after {
+        content: none;
+    }
+
+}
