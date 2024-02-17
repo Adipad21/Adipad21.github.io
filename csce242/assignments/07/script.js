@@ -1,3 +1,11 @@
+//Variables
+const startStop = document.getElementById('startStop');
+let interval;
+let direction = 1; 
+let speed = 2; 
+let position = 0;
+
+//Functions
 const showHideNav = () => {
     const navItems = document.getElementById("nav-items");
     const arrow = document.querySelector("#hamburger .arrow");
@@ -12,67 +20,64 @@ const showHideNav = () => {
 
 const exercise1 = (e) => {
     e.preventDefault(); 
-    document.getElementById("command").classList.add("show");
-    document.getElementById("command").classList.remove("hide-content");
-    document.getElementById("yoga").classList.remove("show");
+    document.getElementById("bounce").classList.add("show-content");
+    document.getElementById("bounce").classList.remove("hide-content");
+    document.getElementById("yoga").classList.remove("show-content");
     document.getElementById("yoga").classList.add("hide-content");
 };
-
 const exercise2 = (e) => {
     e.preventDefault(); 
-    document.getElementById("yoga").classList.add("show");
+    document.getElementById("yoga").classList.add("show-content");
     document.getElementById("yoga").classList.remove("hide-content");
-    document.getElementById("command").classList.remove("show");
-    document.getElementById("command").classList.add("hide-content");
+    document.getElementById("bounce").classList.remove("show-content");
+    document.getElementById("bounce").classList.add("hide-content");
 };
 
-const showCommand = () => {
-    const commandInput = document.getElementById("command-reg").value.trim();
-    const command = commandInput.charAt(commandInput.length - 1).toLowerCase();
-    const comImg = document.getElementById("command-image");
+const bounceBall = () => {
+    const ball = document.getElementById('ball');
+    const containerHeight = document.getElementById('ball-container').offsetHeight;
+    const ballHeight = ball.offsetHeight;
 
-    if(command == "b"){
-        comImg.src = "images/read.jpg";
-    } else if(command == "c"){
-        comImg.src = "images/clown.jpg";
-    } else if(command == "p"){
-        comImg.src = "images/birthday.jpg";
-    } else if(command == "r"){
-        comImg.src = "images/rain.jpg";
-    } else if(command == "s"){
-        comImg.src = "images/shovel.jpg";
-    } else if(command == "w"){
-        comImg.src = "images/work.jpg";
+    if (position > containerHeight - ballHeight || position < 0) {
+        direction *= -1;
+    }
+    position += speed * direction;
+    ball.style.top = `${position}px`;
+};
+
+const toggleBounce = () => {
+    if (startStop.innerHTML === "Start") {
+        startStop.innerHTML = "Stop";
+        interval = setInterval(bounceBall, 10);
     } else {
-        comImg.src = "images/original.jpg";
+        startStop.innerHTML = "Start";
+        clearInterval(interval);
     }
 };
 
-const yogaImage = () => {
-    const slider =document.getElementById("yogaSlider");
-    const newImg = document.getElementById("yoga-image");
-
-    if(slider.value == 1){
-        newImg.src = "images/yoga1.jpg";
-    } else if(slider.value == 2){
-        newImg.src = "images/yoga2.jpg";
-    } else if(slider.value == 3){
-        newImg.src = "images/yoga3.jpg";
-    } else if(slider.value == 4){
-        newImg.src = "images/yoga4.jpg";
-    } else if(slider.value == 5){
-        newImg.src = "images/yoga5.jpg";
-    } else if(slider.value == 6){
-        newImg.src = "images/yoga6.jpg";
-    } else if(slider.value == 7){
-        newImg.src = "images/yoga7.jpg";
-    } else {
-        newImg.src= "images/yoga8.jpg";
+const displayDescriptions = () => {
+    const imageContainers = document.querySelectorAll('.yoga-image-container');
+  
+    for (let i = 0; i < imageContainers.length; i++) {
+        const img = imageContainers[i].querySelector('.yoga-image');
+        const desc = imageContainers[i].querySelector('.description');
+  
+        img.onclick = () => {
+        if (desc.style.display === "none" || !desc.style.display) {
+            desc.style.display = "block";
+            desc.innerHTML = img.getAttribute("rel"); 
+        } else {
+            desc.style.display = "none"; 
+            desc.innerHTML = "";
+        }
+        };
     }
 };
 
+
+// Calling functions
 document.getElementById("hamburger").onclick = showHideNav;
 document.getElementById("exercise1").addEventListener("click", exercise1);
 document.getElementById("exercise2").addEventListener("click", exercise2);
-document.getElementById("command-reg").addEventListener("keyup",showCommand);
-document.getElementById("yogaSlider").addEventListener ('input', yogaImage);
+startStop.onclick = toggleBounce;
+displayDescriptions();
