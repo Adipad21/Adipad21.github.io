@@ -50,6 +50,7 @@ body{
 .hide-small {
     display: none;
 }
+
 /* Main */
 #main-content{
     display: flex;
@@ -77,10 +78,10 @@ body{
     margin:auto;
 }
 #ball {
-    width: 50px; /* Width of the ball */
-    height: 50px; /* Height of the ball */
+    width: 50px; 
+    height: 50px; 
     position: absolute;
-    left: 50%; /* Center the ball horizontally */
+    left: 50%; 
     transform: translateX(-50%);
 }
 #startStop {
@@ -97,6 +98,7 @@ body{
   
 .yoga-image-container {
     display: flex;
+    align-items: center;
     margin-bottom: 20px; 
 }
   
@@ -109,13 +111,13 @@ body{
     display: none;
     width: 200px; 
     padding: 10px;
+    font-weight: bold;
 }
   
 #yoga img{
     max-width: 50%;
     max-height: 50%;
 }
-
 /* Footer */
 #main-footer{
     background: #E1E4E6;
