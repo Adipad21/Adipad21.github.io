@@ -1,0 +1,51 @@
+
+<!DOCTYPE html>
+<html>
+  <head>
+    <!--
+            Author: Aditya Padala
+        -->
+    <title>Arrays</title>
+    <link rel="stylesheet" href="styles.css" />
+  </head>
+
+  <body>
+    <div id="content">
+      <h1>Learning JavaScript</h1>
+
+      <section id="slideshow">
+        <img src="https://github.com/portiaportia/portiaportia.github.io/blob/master/csce242/examples/feb20/images/strawberry.jpg?raw=true" />
+        <img src="https://github.com/portiaportia/portiaportia.github.io/blob/master/csce242/examples/feb20/images/cherry.jpeg?raw=true" class="hidden" />
+        <img src="https://github.com/portiaportia/portiaportia.github.io/blob/master/csce242/examples/feb20/images/grapes.jpg?raw=true" class="hidden" />
+        <img src="https://github.com/portiaportia/portiaportia.github.io/blob/master/csce242/examples/feb20/images/mango.jpg?raw=true" class="hidden" />
+        <img src="https://github.com/portiaportia/portiaportia.github.io/blob/master/csce242/examples/feb20/images/apple.jpg?raw=true" class="hidden" />
+      </section>
+      <div class="columns">
+        <section class="one">
+          <h3>Let's Add Toys</h3>
+          <p>
+            <label for="txt-toy">Enter Toy:</label>
+            <input type="text" id="txt-toy" />
+          </p>
+
+          <button id="button-add-toy">Add Toy</button>
+          <div id="result"></div>
+        </section>
+        <section class="one">
+          <h3>Toy Information</h3>
+          <table id="toy-table">
+            <tr>
+              <th>Toys</th>
+            </tr>
+          </table>
+        </section>
+        <section>
+          <h3>Description</h3>
+          <p id="toy-description"></p>
+        </section>
+      </div>
+    </div>
+    <script src="slide-script.js"></script>
+    <script src="toy-script.js"></script>
+  </body>
+</html>
