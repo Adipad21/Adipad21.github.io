@@ -1,6 +1,6 @@
 const doStuff = () =>{
     const messageP = document.getElementById("message");
-    messageP.innerHTML = "Hello Vuha!";
+    messageP.innerHTML = "Hello Adi!";
     messageP.classList.add("special");
 };
 

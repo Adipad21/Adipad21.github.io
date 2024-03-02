@@ -1,0 +1,104 @@
+body{
+    font-family: Arial, Helvetica, sans-serif;
+    background: #F1F2E9;
+    color: #3D6773;
+}
+
+/* Structure */
+#content{
+    width: 95%;
+    margin: auto; /* center horizontally */
+}
+/* Header */
+#main-header{
+    text-align: center;
+    margin-bottom: 20px;
+}
+
+/* Main */
+#main-content{
+    justify-content: center;
+    margin: auto;
+}
+#tree-container{
+    width:90%;
+    padding:10px;
+    margin:auto;
+    text-align: center;
+}
+/* Tree card styling */
+.tree-card {
+    border-radius: 10px;
+    padding: 30px;
+    margin: 10px auto;
+    background-color: #A4BFB8;
+    color: #fff;
+    cursor: pointer;
+    text-align: center; /* Center the content inside the card */
+}
+
+img {
+    width: 250px;
+    height: 250px;
+    max-width: 100%;
+    max-height: 100%;
+}
+
+
+#dialog section {
+    padding: 10px;
+    background: white;
+    margin: 10px;
+}
+
+/* Details inside the modal */
+#dialog-details p {
+    margin: 10px 0; 
+}
+
+
+/* Footer */
+#main-footer{
+    padding-top:2px;
+    color: #3D6773;
+    text-align: center;
+}
+/* Typography */
+h1{
+    color: #3D6773;
+}
+h2{
+    color: #F07D80;
+}
+a{
+    color:#3D6773;
+}
+
+/* Display */
+.hide-content {
+    display: none;
+}
+.show-content {
+    display: block;
+}
+
+/* For larger resolution */
+@media only screen and (min-width: 800px){
+    #main-content{
+        width:90%;
+        margin:auto;
+        justify-content: space-between;
+    }
+    
+    #tree-container{
+        display: flex;
+        flex-wrap: wrap;
+        align-items: center;
+        gap: 10px;
+    }
+    
+    #tree-container section{
+        flex:1;
+    }
+    
+}
