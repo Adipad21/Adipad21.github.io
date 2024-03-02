@@ -1,5 +1,5 @@
 class Tree {
-    constructor(name, type, growthRate, height, lifespan, habitat, imageName) {
+    constructor(name, type, growthRate, height, lifespan, habitat, description, imageName) {
         this.name = name;
         this.type = type;
         this.growthRate = growthRate;
@@ -7,6 +7,7 @@ class Tree {
         this.lifespan = lifespan;
         this.habitat = habitat;
         this.imageName = imageName;
+        this.description = description;
     }
 
     get item() {
@@ -37,6 +38,8 @@ class Tree {
             detailsSection.appendChild(this.paragraph("Height", this.height));
             detailsSection.appendChild(this.paragraph("Lifespan", this.lifespan));
             detailsSection.appendChild(this.paragraph("Habitat", this.habitat));
+            detailsSection.appendChild(this.paragraph("",this.description));
+
         };
 
         return section;
@@ -51,10 +54,10 @@ class Tree {
 }
 
 const trees = [
-    new Tree("Bald Cypress", "Coniferous", "Medium Growth", "50-70 ft", "100-600 years", "Wetlands", "bald-cypress.jpg"),
-    new Tree("Eastern Redbud", "Deciduous", "Fast Growth", "20-30 ft", "50-75 years", "Forest understory", "eastern-redbud.jpg"),
-    new Tree("Loblolly Pine", "Coniferous", "Fast Growth", "60-90 ft", "100-150 years", "Various soils", "loblolly-pine.jpg"),
-    new Tree("Southern Magnolia", "Evergreen", "Slow Growth", "60-80 ft", "80-120 years", "Well-drained soils", "southern-magnolia.jpg")
+    new Tree("Bald Cypress", "Coniferous", "Medium Growth", "50-70 ft", "100-600 years", "Wetlands", "Bald Cypress, known for its towering presence, is a deciduous conifer that thrives in wetland habitats. These majestic trees can reach heights of 50 to 70 feet and boast a lifespan ranging from 100 to 600 years. Their needle-like leaves turn a beautiful golden hue in the fall, adding to their allure.","bald-cypress.jpg"),
+    new Tree("Eastern Redbud", "Deciduous", "Fast Growth", "20-30 ft", "50-75 years", "Forest understory", "Eastern Redbud is a small deciduous tree. Trees typically grow 20 feet in height with a similar spread and have gracefully ascending branches and a rounded shape. Eastern redbud leaves are alternate, simple, broadly heart-shaped and 3 to 5 inches high and wide. Leaves emerge reddish, turning green as they expand.","eastern-redbud.jpg"),
+    new Tree("Loblolly Pine", "Coniferous", "Fast Growth", "60-90 ft", "100-150 years", "Various soils", "Loblolly Pine, a fast-growing coniferous tree, dominates various soil types with its imposing stature, standing between 60 to 90 feet tall. With a lifespan of 100 to 150 years, these trees contribute to forest ecosystems, providing habitat and resources for diverse wildlife. Their evergreen needles endure throughout the year, offering a striking contrast against snowy landscapes.","loblolly-pine.jpg"),
+    new Tree("Southern Magnolia", "Evergreen", "Slow Growth", "60-80 ft", "80-120 years", "Well-drained soils", "Southern Magnolia, characterized by its glossy evergreen foliage and fragrant blooms, is a slow-growing tree that reaches heights of 60 to 80 feet. Flourishing in well-drained soils, these trees exhibit a lifespan of 80 to 120 years. Their large, leathery leaves and showy white flowers make them a beloved ornamental species, adorning gardens with their timeless beauty.","southern-magnolia.jpg")
 ];
 
 

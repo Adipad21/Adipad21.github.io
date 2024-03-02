@@ -9,6 +9,7 @@ body{
     width: 95%;
     margin: auto; /* center horizontally */
 }
+
 /* Header */
 #main-header{
     text-align: center;
@@ -26,7 +27,7 @@ body{
     margin:auto;
     text-align: center;
 }
-/* Tree card styling */
+
 .tree-card {
     border-radius: 10px;
     padding: 30px;
@@ -34,7 +35,7 @@ body{
     background-color: #A4BFB8;
     color: #fff;
     cursor: pointer;
-    text-align: center; /* Center the content inside the card */
+    text-align: center; 
 }
 
 img {
@@ -44,14 +45,12 @@ img {
     max-height: 100%;
 }
 
-
 #dialog section {
     padding: 10px;
     background: white;
     margin: 10px;
 }
 
-/* Details inside the modal */
 #dialog-details p {
     margin: 10px 0; 
 }
@@ -81,24 +80,32 @@ a{
 .show-content {
     display: block;
 }
+.columns{
+    display: flex;
+    flex-direction: row;
+}
+.columns section{
+    flex:1;
+}
 
 /* For larger resolution */
-@media only screen and (min-width: 800px){
+@media only screen and (min-width: 1000px){
     #main-content{
         width:90%;
         margin:auto;
         justify-content: space-between;
     }
-    
     #tree-container{
         display: flex;
         flex-wrap: wrap;
         align-items: center;
         gap: 10px;
     }
-    
     #tree-container section{
         flex:1;
+    }
+    #dialog-details {
+        flex: 40%;
     }
     
 }
