@@ -31,6 +31,8 @@ class Tree {
             detailsSection.innerHTML = "";
             const h3 = document.createElement("h3");
             h3.textContent = this.name;
+            const p = document.createElement("p");
+            p.textContent = this.description;
 
             detailsSection.appendChild(h3);
             detailsSection.appendChild(this.paragraph("Type", this.type));
@@ -38,8 +40,7 @@ class Tree {
             detailsSection.appendChild(this.paragraph("Height", this.height));
             detailsSection.appendChild(this.paragraph("Lifespan", this.lifespan));
             detailsSection.appendChild(this.paragraph("Habitat", this.habitat));
-            detailsSection.appendChild(this.paragraph("",this.description));
-
+            detailsSection.appendChild(p);
         };
 
         return section;

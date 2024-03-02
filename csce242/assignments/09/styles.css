@@ -87,6 +87,11 @@ a{
 .columns section{
     flex:1;
 }
+#place{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
 
 /* For larger resolution */
 @media only screen and (min-width: 1000px){
