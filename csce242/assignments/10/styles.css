@@ -1,0 +1,101 @@
+body{
+    font-family: Arial, Helvetica, sans-serif;
+    background: #F1F2E9;
+    color: #3D6773;
+}
+
+/* Structure */
+#content{
+    width: 95%;
+    margin: auto; /* center horizontally */
+}
+
+/* Header */
+#main-header{
+    text-align: center;
+    margin-bottom: 20px;
+}
+
+/* Main */
+#main-content{
+    justify-content: center;
+    margin: auto;
+}
+#houses-section{
+    width:90%;
+    margin:auto;
+}
+
+body {
+    font-family: Arial, sans-serif;
+}
+
+.house {
+    margin-bottom: 20px;
+    border: 1px solid #ddd;
+    padding: 15px;
+    background-color: #F2F0D5;
+}
+
+.attach {
+    background: #D98282;
+    display:flex;
+    gap:10px;
+}
+
+.house img {
+    max-width: 100%;
+    max-height: 100%;
+    width: 250px;
+    height: 250px;
+    display: block;
+}
+
+.floor-plans {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 40px;
+    flex: 50%;
+    padding-top: 5px;
+    padding-bottom: 5px;
+}
+
+.floor-plans img {
+    width:400px;
+}
+
+.house h3 {
+    margin: 5px;
+    text-align: center;
+}
+
+.house p {
+    color: #fff;
+    margin-bottom: 5px;
+}
+
+/* Footer */
+#main-footer{
+    padding-top:2px;
+    color: #3D6773;
+    text-align: center;
+}
+/* Typography */
+h1{
+    color: #3D6773;
+}
+h2{
+    color: #F07D80;
+}
+
+/* For larger resolution */
+@media only screen and (min-width: 1000px){
+    #main-content{
+        width:90%;
+        margin:auto;
+        justify-content: space-between;
+    }
+    
+}
