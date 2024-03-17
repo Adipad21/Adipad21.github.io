@@ -39,7 +39,7 @@
             <div id="subject">
                 <div class="content">
                     <h2>Login</h2>
-                    <div id="login">
+                    <div class="login">
                         <div id="email">
                             <h3><b>Email</b></h3>
                             <input type="text" placeholder= "Email">
@@ -51,9 +51,29 @@
                         <p><a href="#">Forgot password?</a></p>
                         <button class="button">Sign In</button>
                     </div>
-                    <p>Don't have an account? <a href="#">Register</a></p>
-                </div>
+                    <p>Don't have an account? <a href="#" id="register-link">Register</a></p>
 
+                    <div id="register" class="login">
+                        <form action="register_process.php" method="POST">
+                            <label for="first_name"><strong>First Name</strong></label><br>
+                            <input type="text" id="first_name" name="first_name" required><br>
+                            
+                            <label for="last_name"><strong>Last Name</strong></label><br>
+                            <input type="text" id="last_name" name="last_name" required><br>
+                            
+                            <label for="email"><strong>Email</strong></label><br>
+                            <input type="email" id="email" name="email" required><br>
+                            
+                            <label for="dob"><strong>Date of Birth</strong></label><br>
+                            <input type="date" id="dob" name="dob" required><br>
+                            
+                            <label for="password"><strong>Password</strong></label><br>
+                            <input type="password" id="password" name="password" required><br>
+                            
+                            <input type="submit" value="Register">
+                        </form>
+                    </div>
+                </div>
             </div>
         </main>
     
